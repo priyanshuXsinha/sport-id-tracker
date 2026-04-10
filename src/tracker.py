@@ -128,7 +128,11 @@ class SportsTracker:
     # ── Main processing loop ──────────────────────────────────────────────────
 
     def process(self, video_path: str, output_path: str) -> dict:
-        cap = cv2.VideoCapture(video_path)
+        results = self.model.track(
+    source=video_path,
+    save=True,
+    persist=True
+)
         if not cap.isOpened():
             raise FileNotFoundError(f"Cannot open video: {video_path}")
 
