@@ -1,0 +1,10 @@
+{
+  "summary": {
+    "output_video": "output_tracked.mp4",
+    "total_frames_processed": 0,
+    "total_unique_ids": 0,
+    "avg_active_per_frame": 0,
+    "max_active_per_frame": 0
+  },
+  "per_frame": []
+}

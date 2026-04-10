@@ -1,0 +1,23 @@
+# BoT-SORT tracker configuration
+# Loaded by ultralytics YOLO.track()
+# Reference: https://github.com/NirAharon/BoT-SORT
+
+tracker_type: botsort
+
+# Kalman filter / motion model
+track_high_thresh: 0.5      # high-conf detections (matched first)
+track_low_thresh:  0.1      # low-conf detections (matched second pass)
+new_track_thresh:  0.6      # minimum conf to initialise a new track
+track_buffer:      60       # frames to keep a lost track alive (2 s @ 30fps)
+
+# Association
+match_thresh:      0.8      # IoU threshold for first-stage matching
+fuse_score:        true     # fuse detection score into cost matrix
+
+# Appearance (Re-ID branch inside BoT-SORT)
+with_reid:         false    # we handle Re-ID externally via OSNet gallery
+proximity_thresh:  0.5
+appearance_thresh: 0.25
+
+# Camera motion compensation
+cmc_method:        sparseOptFlow   # ECC | sparseOptFlow | orb | sof | none
