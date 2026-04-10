@@ -5,10 +5,8 @@ Detector : YOLOv8n  (ultralytics)
 Tracker  : BoT-SORT (built into ultralytics >= 8.1)
 Re-ID    : OSNet-x0.25 via torchreid (appearance gallery for re-association)
 """
-# try:
-#     import cv2
-# except:
-#     cv2 = None
+
+import cv2
 import numpy as np
 import torch
 import time
@@ -128,11 +126,7 @@ class SportsTracker:
     # ── Main processing loop ──────────────────────────────────────────────────
 
     def process(self, video_path: str, output_path: str) -> dict:
-        results = self.model.track(
-    source=video_path,
-    save=True,
-    persist=True
-)
+        cap = cv2.VideoCapture(video_path)
         if not cap.isOpened():
             raise FileNotFoundError(f"Cannot open video: {video_path}")
 
