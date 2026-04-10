@@ -5,10 +5,10 @@ Detector : YOLOv8n  (ultralytics)
 Tracker  : BoT-SORT (built into ultralytics >= 8.1)
 Re-ID    : OSNet-x0.25 via torchreid (appearance gallery for re-association)
 """
-try:
-    import cv2
-except:
-    cv2 = None
+# try:
+#     import cv2
+# except:
+#     cv2 = None
 import numpy as np
 import torch
 import time
