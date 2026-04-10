@@ -1,22 +1,6 @@
-# Core
-ultralytics>=8.1.0         # YOLOv8 + BoT-SORT built-in
-torch>=2.0.0
-torchvision>=0.15.0
-opencv-python>=4.8.0
-numpy>=1.24.0
-
-# Re-ID (optional but recommended)
-# Install via: pip install git+https://github.com/KaiyangZhou/deep-person-reid.git
-# or:          pip install torchreid
-torchreid; python_requires>="3.8"
-
-# Video download utility
-yt-dlp>=2024.1.0
-
-# Analytics / notebook
-matplotlib>=3.7.0
-ipykernel>=6.0.0
-jupyter>=1.0.0
-
-# Dev / eval (optional)
-scipy>=1.11.0
+streamlit
+ultralytics
+opencv-python-headless
+numpy
+pillow
+matplotlib
